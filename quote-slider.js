@@ -14,7 +14,7 @@ window.onload = function() {
         quotes[i-1].className = quotes[i-1].className.replace("active", "not-active");
       }
     }
-    window.setTimeout(() => callLoop(quotes, ++i), 5000);
+    window.setTimeout(() => callLoop(quotes, ++i), 3000);
   }
   quotes = document.getElementsByClassName("quote");
   callLoop(quotes, 0);

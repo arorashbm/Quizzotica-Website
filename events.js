@@ -1,7 +1,6 @@
 var a_top = document.getElementById("events-top");
 var a_bottom = document.getElementById("events-bottom");
 var width = window.screen.width;
-console.log(width);
 function change_events(width) {
     if(width <= 1214) {
         a_top.setAttribute("href", "index.html#events-mobile-tab");

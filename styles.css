@@ -9,9 +9,9 @@
 
 .logo {
   display: inline-block;
-  width: 80px;
-  height: 30px;
-  margin-top: -20px;
+  width: fit-content;
+  height: fit-content;
+  margin-top: 0;
 }
 
 nav {
@@ -20,9 +20,15 @@ nav {
 }
 
 #logo-img {
-  width: 100%;
-  height: 170%;
+  width: 11vw;
+  height: 8vh;
   border: 1px solid whitesmoke;
+}
+
+@media screen and (max-width: 500px) {
+  #logo-img {
+    width: 15vw;
+  }
 }
 
 #navbarSupportedContent{
@@ -36,7 +42,7 @@ button:focus, a:focus {
 @media screen and (min-width: 992px) {
   .grid-nav {
     display: grid;
-    grid-template-columns: auto auto auto auto auto 26%;
+    grid-template-columns: auto auto auto auto auto auto;
     margin-left: auto;
     margin-right: 0!important;
   }
@@ -49,18 +55,35 @@ button:focus, a:focus {
 }
 
 .nav-item {
-  margin-right: 10px;
+  margin-right: 1vw;
 }
 
 .nav-link {
   color: whitesmoke !important;
-  font-size: 20px;
+  font-size: 2vw;
   text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .nav-link {
+    font-size: 5vw;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 650px) {
+  .nav-link {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (min-width: 651px) and (max-width: 991px) {
+  .nav-link {
+    font-size: 2.5vw;
+  }
 }
 
 @media screen and (min-width: 992px) {
   .nav-link {
-    padding-left: 1rem!important;
     color: whitesmoke;
   }
 
@@ -103,8 +126,8 @@ button:focus, a:focus {
   background: url('buzzer-phone-view.jpg');
   /*background: url('logo.jpeg');*/
   background-repeat: no-repeat;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
 }
 
 @media screen and (max-width: 640px) {
@@ -118,10 +141,10 @@ button:focus, a:focus {
 
 @media screen and (min-width: 641px) and (max-width: 800px) {
   #background-img {
-    height: 80vh;
+    height: 65vh;
     background: url('buzzer-tab-view.jpg');
     /*background: url('logo.jpeg');*/
-    background-size: 100% 80vh;
+    background-size: 100% 65vh;
   }
 }
 
@@ -130,7 +153,7 @@ button:focus, a:focus {
     height: 80vh;
     background: url('buzzer-desktop-view.jpg');
     /*background: url('logo.jpeg');*/
-    background-size: 100% 80vh;
+    background-size: 100% 90vh;
   }
 }
 
@@ -138,64 +161,45 @@ button:focus, a:focus {
   background-color: rgba(0,0,0, 0.4);
   color: white;
   font-weight: bold;
-  border: 3px solid #f1f1f1;
+  border: 0.3vw solid #f1f1f1;
   position: absolute;
-  top: 35%;
-  left: 50%;
+  top: 35vh;
+  left: 50vw;
   transform: translate(-50%, -50%);
-  padding: 20px;
-  width: 70%;
+  padding: 1vw;
+  max-width: 85%;
+  width: fit-content;
+  height: fit-content;
   text-align: center;
   z-index: 1;
 }
 
 .name {
-  margin-bottom: -5px;
-  font-size: 10vw;
+  font-size: 15vw;
   font-family: 'Bree Serif', serif;
 }
 
 .reduce-distance {
   font-weight: bold;
   font-style: italic;
-  margin-left: 200px;
-  font-size: 2vw;
+  margin-left: 30vw;
+  font-size: 3vw;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 450px) {
   .club-name {
-    top: 24%;
-    width: 90%;
-    height: 22%;
-  }
-
-  .club-name-reduce-height {
-    height: 22%;
-  }
-
-  .name {
-      margin-bottom: 1px;
-  }
-
-  .reduce-distance {
-    margin-left: 10px;
-    font-size: 3vw;
+    top: 27vh;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
   .club-name {
-    top: 23%;
-    height: 24%;
-  }
-
-  .club-name-reduce-height {
-    height: 20%;
+    top: 30vh;
   }
 }
 
 .author {
-  margin-left: 200px;
+  margin-left: 40vw;
   color: #66b3ff;
   font-size: 2.5vh;
 }
@@ -205,30 +209,28 @@ button:focus, a:focus {
 }
 
 @media screen and (max-width: 640px) {
+  .quote-content {
+    font-size: 2vh;
+  }
+
   .club-name-reduce-top {
-    top: 48%;
+    top: 53vh;
   }
 
   .author {
-    margin-left: 50px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .club-name-reduce-top {
-    top: 47%;
+    font-size: 2vh;
   }
 }
 
 @media screen and (min-width: 641px) and (max-width: 800px) {
   .club-name-reduce-top {
-    top: 70%;
+    top: 60vh;
   }
 }
 
 @media screen and (min-width: 801px) {
   .club-name-reduce-top {
-    top: 75%;
+    top: 70vh;
   }
 }
 
@@ -250,24 +252,18 @@ button:focus, a:focus {
   font-family: 'Bree Serif', serif;
 }
 
-#about-h, #upcoming-h, #gallery-h, #core-h, #co-ordinate-h {
+#about-h, #events-h, #upcoming-h, #gallery-h, #core-h, #dev-h,  #co-ordinate-h {
   margin-top: 5%;
+  font-size: 6vh;
 }
 
 #about-p {
-  margin-left: 15vh;
-  margin-right: 15vh;
-  font-size: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+  font-size: 3vh;
   text-align: center;
   font-family: 'Bree Serif', serif;
-}
-
-@media screen and (max-width: 640px) {
-  #about-p {
-    margin-left: 5vh;
-    margin-right: 5vh;
-    font-size: 20px;
-  }
 }
 
 #events-h {
@@ -275,40 +271,31 @@ button:focus, a:focus {
 }
 
 #events-desktop {
-  margin: 20px;
+  margin: 5vh;
   display: none;
 }
 
 .recommend_block {
   display: block;
-  height: 200px;
-  width: calc(100% - 2px);
-  margin-top: 100px;
+  height: fit-content;
+  width: fit-content;
+  margin-top: 15vh;
+  margin-left: 5vh;;
 }
 
-.comment_block-left {
-  font-size: 28px;
+.comment_block-left, .comment_block-right {
   display: inline-block;
-  margin-left: 15%;
-  width: 45%;
+  width: 54vw;
   font-family: 'Bree Serif', serif;
 }
 
-.comment_block-right {
-  font-size: 28px;
-  display: inline-block;
-  margin-left: 0px;
-  width: 45%;
-  font-family: 'Bree Serif', serif;
+.title {
+  color: grey;
+  font-size: 2vw;
 }
-
 
 .description {
-  font-size: 16px;
-}
-
-.profile {
-  font-size: 12px;
+  font-size: 1.25vw;
 }
 
 .balloon_img {
@@ -318,20 +305,15 @@ button:focus, a:focus {
   width: 4vh;
 }
 
-.presenter_img-left {
-  margin-left: 10px;
+.presenter_img-right, .presenter_img-left {
   margin-right: 10px;
   margin-top: -140px;
-  width: 35vh;
+  width: 30vw;
   height: 35vh;
 }
 
-.presenter_img-right {
-  margin-left: 15%;
-  margin-right: 10px;
-  margin-top: -140px;
-  width: 35vh;
-  height: 35vh;
+.presenter_img-left {
+  margin-left: 10px;
 }
 
 #events-mobile-tab {
@@ -342,7 +324,7 @@ button:focus, a:focus {
   top: 0px;
   margin: auto;
   margin-top: 0px;
-  font-size: 20px;
+  font-size: 1rem;
   background: aliceblue;
   margin-bottom: 20px;
   width: 80%;
@@ -355,6 +337,10 @@ button:focus, a:focus {
 
 .back {
   display: none;
+}
+
+.card-title {
+  font-size: 1.5rem;
 }
 
 @media screen and (min-width: 570px) and (max-width: 1214px){
@@ -389,12 +375,13 @@ button:focus, a:focus {
 }
 
 #carouselExampleInterval {
-  height: 100%;
+  height: fit-content;
   margin: 40px;
+  margin-bottom: 0;
 }
 
 .carousel-indicators {
-  bottom: 25%!important;
+  padding-bottom: 0!important;
 }
 
 .d-block {
@@ -417,8 +404,9 @@ button:focus, a:focus {
   }
 
   #carouselExampleInterval {
-    height: 100%;
+    height: fit-content;
     margin: 0px;
+    margin-bottom: 0;
   }
 
   .carousel-control-next, .carousel-control-prev{
@@ -485,11 +473,6 @@ button:focus, a:focus {
   }
 }
 
-.title {
-  color: grey;
-  font-size: 18px;
-}
-
 .contact-info {
   border: none;
   outline: 0;
@@ -505,7 +488,7 @@ button:focus, a:focus {
 
 .fafa {
   text-decoration: none;
-  font-size: 30px;
+  font-size: 2.5vw;
   color: black;
 }
 
@@ -513,8 +496,44 @@ button:focus, a:focus {
   opacity: 0.7;
 }
 
+.dev > h3 {
+  font-size: 2.5vw;
+}
+
 .for-devs {
+  font-size: 1.5vw;
   margin-bottom: 5px;
+}
+
+@media screen and (min-width: 400px) and (max-width: 850px) {
+  .dev > h3 {
+    font-size: 3.5vw;
+  }
+  
+  .for-devs {
+    font-size: 2.5vw;
+  }
+
+  .fafa {
+    font-size: 5vw;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .dev {
+    margin-top: 0;
+  }
+  .dev > h3 {
+    font-size: 5vw;
+  }
+  
+  .for-devs {
+    font-size: 3.5vw;
+  }
+
+  .fafa {
+    font-size: 7vw;
+  }
 }
 
 .flex-imple {
@@ -543,6 +562,7 @@ button:focus, a:focus {
 }
 
 .footer-name-h > a {
+  font-size: 4vw;
   color: black;
   text-decoration: none;
 }
@@ -563,6 +583,27 @@ button:focus, a:focus {
   width: 30%;
 }
 
+.footer-nav {
+  font-size: 1.5vw;
+}
+
+.address > a {
+  font-size: 2.5vw;
+}
+
+.location {
+  font-size: 1.5vw;
+}
+
+.mail > a {
+  margin-bottom: 30px;
+  font-size: 2vw!important;
+}
+
+.number {
+  font-size: 3vw;
+}
+
 @media screen and (max-width: 700px) {
   .footer-left {
     width: 100%;
@@ -579,11 +620,29 @@ button:focus, a:focus {
   .footer-left > p {
     text-align: center;
   }
+
+  .footer-name-h > a {
+    font-size: 8vw;
+  }
+
+  .footer-nav, .number, .mail > a {
+    font-size: 4vw!important;
+  }
+
+  .address > a {
+    font-size: 5vw;
+  }
+
+  .location {
+    font-size: 3.5vw;
+  }
 }
 
 @media screen and (min-width: 701px) {
   .footer-left > p {
-    margin-left: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
   }
 }
 
@@ -593,15 +652,11 @@ button:focus, a:focus {
 }
 
 .address, .number {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .location, .mail, .footer-nav {
   margin-top: 5px;
-}
-
-.mail {
-  margin-bottom: 30px;
 }
 
 #copyright {
@@ -609,8 +664,15 @@ button:focus, a:focus {
 }
 
 #copyright > p {
+  font-size: 1.5vw;
   text-align: center;
   margin-bottom: 1px;
+}
+
+@media screen and (max-width: 500px) {
+  #copyright > p {
+    font-size: 3vw;
+  }
 }
 
 #background-img-team {
@@ -629,18 +691,19 @@ button:focus, a:focus {
   font-weight: bold;
   border: 3px solid #f1f1f1;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 50vh;
+  left: 50vw;
   transform: translate(-50%, -50%);
   padding: 20px;
-  width: 70%;
+  max-width: 80%;
+  width: fit-content;
   text-align: center;
   z-index: 1;
 }
 
 .name-team {
   margin-bottom: -5px;
-  font-size: 8vw;
+  font-size: 10vw;
   font-family: 'Bree Serif', serif;
 }
 
