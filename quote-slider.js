@@ -18,21 +18,4 @@ window.onload = function() {
   }
   quotes = document.getElementsByClassName("quote");
   callLoop(quotes, 0);
-
-  /*active_nav = document.getElementsByClassName("nav-item");
-
-  function changeActive() {
-    for(i=0; i<active_nav.length; i++){
-      if(active_nav[i].className == "nav-item active") {
-        active_nav[i].className = active_nav[i].className.replace(" active", "");
-        break;
-      }
-    }
-
-    this.classList.add("active");
-  }
-
-  for(i=0; i<active_nav.length; i++){
-    active_nav[i].addEventListener("click", changeActive);
-  }*/
 }

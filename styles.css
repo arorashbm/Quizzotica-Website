@@ -20,7 +20,7 @@ nav {
 }
 
 #logo-img {
-  width: 11vw;
+  width: 9vw;
   height: 8vh;
   border: 1px solid whitesmoke;
 }
@@ -42,20 +42,24 @@ button:focus, a:focus {
 @media screen and (min-width: 992px) {
   .grid-nav {
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto auto;
     margin-left: auto;
     margin-right: 0!important;
   }
+}
+
+.nav-item {
+  margin-right: 1vw;
 }
 
 @media screen and (max-width: 991px) {
   .grid-nav {
     margin-top: 10px;
   }
-}
 
-.nav-item {
-  margin-right: 1vw;
+  .nav-item {
+    margin-right: 0;
+  }
 }
 
 .nav-link {
@@ -86,14 +90,26 @@ button:focus, a:focus {
   .nav-link {
     color: whitesmoke;
   }
-
-  .padd {
-    padding-left: 2rem!important;
-  }
 }
 
 .nav-link:hover {
   font-weight: bold;
+}
+
+.active-nav {
+  background: whitesmoke;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 991px) {
+  .active-nav {
+    border-radius: 0;
+  }
+}
+
+.active-nav-a {
+  font-weight: bold;
+  color: #212529!important;
 }
 
 .active {
@@ -291,6 +307,7 @@ button:focus, a:focus {
 
 .title {
   color: grey;
+  text-align: center;
   font-size: 2vw;
 }
 
@@ -384,12 +401,22 @@ button:focus, a:focus {
   padding-bottom: 0!important;
 }
 
+.carousel-indicators li {
+  width: 2vw;
+  height: 0.5vh;
+}
+
 .d-block {
   height: 80vh;
 }
 
 .carousel-control-next, .carousel-control-prev{
   height: 80vh;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  width: 20vw;
+  height: 3vh;
 }
 
 @media screen and (max-width: 900px) {

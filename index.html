@@ -22,22 +22,26 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto grid-nav" id="ul-nav">
-            <li class="nav-item active padd">
-              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+            <!--Don't add class to <li></li>-->
+            <li class="nav-item active-nav" data-nav-no=0>
+              <a class="nav-link active-nav-a" href="#">Home<span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" data-nav-no=1>
               <a class="nav-link" href="#about">About</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" data-nav-no=2>
               <a id="events-top" class="nav-link">Events</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" data-nav-no=3>
               <a class="nav-link" href="#gallery">Gallery</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" data-nav-no=4>
               <a class="nav-link" href="team.html">Team</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" data-nav-no=5>
+              <a class="nav-link" href="#footer">Contact us</a>
+            </li>
+            <li class="nav-item" data-nav-no=6>
               <a target="_blank" href="header.js" class="nav-link download">Sample Quiz</a>
             </li>
           </ul>
@@ -206,40 +210,40 @@
           <li data-target="#carouselExampleIndicators" onclick="carouselIndicator(this)" data-slide-to="11" class="carousel-indicators-for-click"></li>
         </ol>
         <div class="carousel-inner">
-          <div class="carousel-item active" data-interval="1000" data-pic-no="0">
+          <div class="carousel-item active" data-interval="4000" data-pic-no="0">
             <img src="1.png" class="d-block w-100 size" alt="quiz">
           </div>
-          <div class="carousel-item" data-interval="1000"  data-pic-no="1">
+          <div class="carousel-item" data-interval="4000"  data-pic-no="1">
             <img src="2.jpg" class="d-block w-100 size" alt="logo">
           </div>
-          <div class="carousel-item" data-interval="1000" data-pic-no="2">
+          <div class="carousel-item" data-interval="4000" data-pic-no="2">
             <img src="3.jpg" class="d-block w-100 size" alt="quiz">
           </div>
-          <div class="carousel-item" data-interval="1000" data-pic-no="3">
+          <div class="carousel-item" data-interval="4000" data-pic-no="3">
             <img src="4.jpg" class="d-block w-100 size" alt="quiz">
           </div>
-          <div class="carousel-item" data-interval="1000"  data-pic-no="4">
+          <div class="carousel-item" data-interval="4000"  data-pic-no="4">
             <img src="5.jpg" class="d-block w-100 size" alt="logo">
           </div>
-          <div class="carousel-item" data-interval="1000" data-pic-no="5">
+          <div class="carousel-item" data-interval="4000" data-pic-no="5">
             <img src="6.jpg" class="d-block w-100 size" alt="quiz">
           </div>
-          <div class="carousel-item" data-interval="1000" data-pic-no="6">
+          <div class="carousel-item" data-interval="4000" data-pic-no="6">
             <img src="7.jpg" class="d-block w-100 size" alt="quiz">
           </div>
-          <div class="carousel-item" data-interval="1000"  data-pic-no="7">
+          <div class="carousel-item" data-interval="4000"  data-pic-no="7">
             <img src="8.jpg" class="d-block w-100 size" alt="logo">
           </div>
-          <div class="carousel-item" data-interval="1000" data-pic-no="8">
+          <div class="carousel-item" data-interval="4000" data-pic-no="8">
             <img src="9.jpg" class="d-block w-100 size" alt="quiz">
           </div>
-          <div class="carousel-item" data-interval="1000" data-pic-no="9">
+          <div class="carousel-item" data-interval="4000" data-pic-no="9">
             <img src="10.jpg" class="d-block w-100 size" alt="quiz">
           </div>
-          <div class="carousel-item" data-interval="1000"  data-pic-no="10">
+          <div class="carousel-item" data-interval="4000"  data-pic-no="10">
             <img src="11.jpg" class="d-block w-100 size" alt="logo">
           </div>
-          <div class="carousel-item" data-interval="1000" data-pic-no="11">
+          <div class="carousel-item" data-interval="4000" data-pic-no="11">
             <img src="12.jpg" class="d-block w-100 size" alt="quiz">
           </div>
         </div>
@@ -359,12 +363,12 @@
         checkActive(image_indicator_clicked);
       }
     </script>
-
+    
     <script type="text/javascript" src="header.js"></script>
-    <script type="text/javascript" src="nav.js"></script>
     <script type="text/javascript" src="card.js"></script>
     <script type="text/javascript" src="events.js"></script>
     <script type="text/javascript" src="quote-slider.js"></script>
+    <script type="text/javascript" src="nav.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
