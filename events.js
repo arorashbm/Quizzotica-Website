@@ -5,11 +5,11 @@ var width = window.screen.width;
 function change_events(width) {
     if(width <= 1214) {
         a_top.setAttribute("href", "index.html#events-mobile-tab");
-        a_bottom.setAttribute("href", "index.html#events-mobile-tab");
+        //a_bottom.setAttribute("href", "index.html#events-mobile-tab");
     }
     else {
         a_top.setAttribute("href", "index.html#events-desktop");
-        a_bottom.setAttribute("href", "index.html#events-desktop");
+        //a_bottom.setAttribute("href", "index.html#events-desktop");
     }
 }
 

@@ -10,19 +10,17 @@ var offset_arr;
 var nav = document.getElementById("ul-nav").classList;
 var html = document.getElementsByTagName("html")[0];
 var width = window.screen.width;
+var nav_button = document.getElementById("nav-button-less-than-992px");
 
-function navColor(width) {
+function navButton(width) {
     if(width <= 991) {
-        for(i=0;i<nav.length;i++) {
-            if(nav[i] != "responsive-nav")
-                nav.add("responsive-nav");
+        if(nav_button.classList.length == 1) {
+            nav_button.firstElementChild.classList.remove("fa-bars");
+            nav_button.firstElementChild.classList.add("fa-times");
         }
-    }
-
-    else if(width > 992) {
-        for(i=0;i<nav.length;i++) {
-            if(nav[i] == "responsive-nav")
-                nav.remove("responsive-nav");
+        else {
+            nav_button.firstElementChild.classList.remove("fa-times");
+            nav_button.firstElementChild.classList.add("fa-bars");
         }
     }
 }
@@ -90,11 +88,9 @@ function scrolledNav() {
     }
 }
 
-/*eventsAdd(width);
-navColor(width);*/
 window.setInterval(function() {
     width = window.screen.width;
-    navColor(width);
+    navButton(width);
     eventsAdd(width);
     scrolledNav();
 }, 50);
