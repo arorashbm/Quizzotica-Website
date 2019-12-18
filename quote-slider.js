@@ -1,4 +1,5 @@
-window.onload = function() {
+//window.onload = function() {
+  //document.getElementsByClassName("loader")[0].classList.remove("loader");
   function callLoop(quotes, i) {
     if(i==quotes.length){
       i=0;
@@ -18,4 +19,4 @@ window.onload = function() {
   }
   quotes = document.getElementsByClassName("quote");
   callLoop(quotes, 0);
-}
+//}
