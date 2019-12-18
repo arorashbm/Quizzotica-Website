@@ -34,10 +34,14 @@ function eventsAdd(width) {
     if(curr_page == "home-page")
         offset_arr = [header.offsetTop, about.offsetTop-20, events.offsetTop-20, gallery.offsetTop-20, developers.offsetTop-20, footer.offsetTop-20];
     else if(curr_page == "team-page") {
-        if(activeFooter())
+        if(activeFooter()) {
+            offset_arr = [];
             changeActiveUtil(active_nav.length - 2);
-        else
+        }
+        else {
+            offset_arr = [];
             changeActiveUtil(active_nav.length - 3);
+        }
     }
 }
 
@@ -94,8 +98,6 @@ window.setInterval(function() {
     eventsAdd(width);
     scrolledNav();
 }, 50);
-
-//window.setInterval(scrolledNav, 50);
 
 for(i=0;i<active_nav.length-1;i++){
     active_nav[i].addEventListener("click", changeActive);

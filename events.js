@@ -37,9 +37,7 @@ function resolution_change(width) {
 resolution_change(width);
 change_events(width);
 window.setInterval(function() {
-    if(width != window.screen.width) {
-        width = window.screen.width;
-        resolution_change(width);
-        change_events(width);
-    }
+    width = window.screen.width;
+    resolution_change(width);
+    change_events(width);
 }, 50);
