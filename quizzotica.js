@@ -1,4 +1,5 @@
 var loader = document.getElementsByClassName("loader")[0];
+loader.style.background = "url('./loader/loader.gif') 50% 50% no-repeat white";
 
 window.onload = function() {
     document.getElementsByTagName("body")[0].style.overflow = "auto";
